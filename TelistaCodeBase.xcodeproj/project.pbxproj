@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9834740A24A51785009C4C40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9834740924A51785009C4C40 /* AppDelegate.swift */; };
+		9834741324A51791009C4C40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9834741224A51791009C4C40 /* Assets.xcassets */; };
+		9834741624A51791009C4C40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9834741424A51791009C4C40 /* LaunchScreen.storyboard */; };
+		985F57DA24A5B8F50050267C /* FactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57D924A5B8F50050267C /* FactsViewController.swift */; };
+		985F57DC24A5B9700050267C /* FactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57DB24A5B9700050267C /* FactsTableViewCell.swift */; };
+		985F57DE24A5B9930050267C /* FactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57DD24A5B9930050267C /* FactsModel.swift */; };
+		985F57E024A5C1D90050267C /* FactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57DF24A5C1D90050267C /* FactsService.swift */; };
+		985F57E824A5E16D0050267C /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57E724A5E16D0050267C /* Performance.swift */; };
+		985F57EA24A5E5210050267C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 985F57E924A5E5210050267C /* Default-568h@2x.png */; };
+		985F57EC24A5E7000050267C /* FactsTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57EB24A5E7000050267C /* FactsTableViewCellTest.swift */; };
+		985F57EE24A5E75A0050267C /* FactsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57ED24A5E75A0050267C /* FactsServiceTest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9834741D24A51792009C4C40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 983473FE24A51784009C4C40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9834740524A51784009C4C40;
+			remoteInfo = TelistaCodeBase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9834740624A51784009C4C40 /* TelistaCodeBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelistaCodeBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9834740924A51785009C4C40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9834741224A51791009C4C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9834741524A51791009C4C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9834741724A51792009C4C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9834741C24A51792009C4C40 /* TelistaCodeBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelistaCodeBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9834742224A51792009C4C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		985F57D924A5B8F50050267C /* FactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewController.swift; sourceTree = "<group>"; };
+		985F57DB24A5B9700050267C /* FactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewCell.swift; sourceTree = "<group>"; };
+		985F57DD24A5B9930050267C /* FactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsModel.swift; sourceTree = "<group>"; };
+		985F57DF24A5C1D90050267C /* FactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsService.swift; sourceTree = "<group>"; };
+		985F57E724A5E16D0050267C /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
+		985F57E924A5E5210050267C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		985F57EB24A5E7000050267C /* FactsTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewCellTest.swift; sourceTree = "<group>"; };
+		985F57ED24A5E75A0050267C /* FactsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsServiceTest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9834740324A51784009C4C40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9834741924A51792009C4C40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		983473FD24A51784009C4C40 = {
+			isa = PBXGroup;
+			children = (
+				985F57E924A5E5210050267C /* Default-568h@2x.png */,
+				9834740824A51784009C4C40 /* TelistaCodeBase */,
+				9834741F24A51792009C4C40 /* TelistaCodeBaseTests */,
+				9834740724A51784009C4C40 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9834740724A51784009C4C40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9834740624A51784009C4C40 /* TelistaCodeBase.app */,
+				9834741C24A51792009C4C40 /* TelistaCodeBaseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9834740824A51784009C4C40 /* TelistaCodeBase */ = {
+			isa = PBXGroup;
+			children = (
+				9834741424A51791009C4C40 /* LaunchScreen.storyboard */,
+				985F57E624A5E0810050267C /* SupportingFiles */,
+				985F57E524A5DFD00050267C /* ViewModel */,
+				985F57E424A5DFC80050267C /* View */,
+				985F57E324A5DFBD0050267C /* Model */,
+				9834741224A51791009C4C40 /* Assets.xcassets */,
+			);
+			path = TelistaCodeBase;
+			sourceTree = "<group>";
+		};
+		9834741F24A51792009C4C40 /* TelistaCodeBaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				9834742224A51792009C4C40 /* Info.plist */,
+				985F57E724A5E16D0050267C /* Performance.swift */,
+				985F57EB24A5E7000050267C /* FactsTableViewCellTest.swift */,
+				985F57ED24A5E75A0050267C /* FactsServiceTest.swift */,
+			);
+			path = TelistaCodeBaseTests;
+			sourceTree = "<group>";
+		};
+		985F57E324A5DFBD0050267C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				985F57DD24A5B9930050267C /* FactsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		985F57E424A5DFC80050267C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				985F57DB24A5B9700050267C /* FactsTableViewCell.swift */,
+				985F57D924A5B8F50050267C /* FactsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		985F57E524A5DFD00050267C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				985F57DF24A5C1D90050267C /* FactsService.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		985F57E624A5E0810050267C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9834741724A51792009C4C40 /* Info.plist */,
+				9834740924A51785009C4C40 /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9834740524A51784009C4C40 /* TelistaCodeBase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9834743024A51793009C4C40 /* Build configuration list for PBXNativeTarget "TelistaCodeBase" */;
+			buildPhases = (
+				9834740224A51784009C4C40 /* Sources */,
+				9834740324A51784009C4C40 /* Frameworks */,
+				9834740424A51784009C4C40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TelistaCodeBase;
+			productName = TelistaCodeBase;
+			productReference = 9834740624A51784009C4C40 /* TelistaCodeBase.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9834741B24A51792009C4C40 /* TelistaCodeBaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9834743324A51793009C4C40 /* Build configuration list for PBXNativeTarget "TelistaCodeBaseTests" */;
+			buildPhases = (
+				9834741824A51792009C4C40 /* Sources */,
+				9834741924A51792009C4C40 /* Frameworks */,
+				9834741A24A51792009C4C40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9834741E24A51792009C4C40 /* PBXTargetDependency */,
+			);
+			name = TelistaCodeBaseTests;
+			productName = TelistaCodeBaseTests;
+			productReference = 9834741C24A51792009C4C40 /* TelistaCodeBaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		983473FE24A51784009C4C40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = VamsiKrishna;
+				TargetAttributes = {
+					9834740524A51784009C4C40 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					9834741B24A51792009C4C40 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 9834740524A51784009C4C40;
+					};
+				};
+			};
+			buildConfigurationList = 9834740124A51784009C4C40 /* Build configuration list for PBXProject "TelistaCodeBase" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 983473FD24A51784009C4C40;
+			productRefGroup = 9834740724A51784009C4C40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9834740524A51784009C4C40 /* TelistaCodeBase */,
+				9834741B24A51792009C4C40 /* TelistaCodeBaseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9834740424A51784009C4C40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9834741624A51791009C4C40 /* LaunchScreen.storyboard in Resources */,
+				9834741324A51791009C4C40 /* Assets.xcassets in Resources */,
+				985F57EA24A5E5210050267C /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9834741A24A51792009C4C40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9834740224A51784009C4C40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				985F57DA24A5B8F50050267C /* FactsViewController.swift in Sources */,
+				9834740A24A51785009C4C40 /* AppDelegate.swift in Sources */,
+				985F57E024A5C1D90050267C /* FactsService.swift in Sources */,
+				985F57DE24A5B9930050267C /* FactsModel.swift in Sources */,
+				985F57DC24A5B9700050267C /* FactsTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9834741824A51792009C4C40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				985F57E824A5E16D0050267C /* Performance.swift in Sources */,
+				985F57EE24A5E75A0050267C /* FactsServiceTest.swift in Sources */,
+				985F57EC24A5E7000050267C /* FactsTableViewCellTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9834741E24A51792009C4C40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9834740524A51784009C4C40 /* TelistaCodeBase */;
+			targetProxy = 9834741D24A51792009C4C40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9834741424A51791009C4C40 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9834741524A51791009C4C40 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9834742E24A51793009C4C40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9834742F24A51793009C4C40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9834743124A51793009C4C40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "/Users/kameswararao/Desktop/iOS Apps/TelistaCodeBase/TelistaCodeBase/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vamsi.com.TelistaCodeBase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9834743224A51793009C4C40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "/Users/kameswararao/Desktop/iOS Apps/TelistaCodeBase/TelistaCodeBase/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vamsi.com.TelistaCodeBase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9834743424A51793009C4C40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TelistaCodeBaseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vamsi.com.TelistaCodeBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TelistaCodeBase.app/TelistaCodeBase";
+			};
+			name = Debug;
+		};
+		9834743524A51793009C4C40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TelistaCodeBaseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vamsi.com.TelistaCodeBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TelistaCodeBase.app/TelistaCodeBase";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9834740124A51784009C4C40 /* Build configuration list for PBXProject "TelistaCodeBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9834742E24A51793009C4C40 /* Debug */,
+				9834742F24A51793009C4C40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9834743024A51793009C4C40 /* Build configuration list for PBXNativeTarget "TelistaCodeBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9834743124A51793009C4C40 /* Debug */,
+				9834743224A51793009C4C40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9834743324A51793009C4C40 /* Build configuration list for PBXNativeTarget "TelistaCodeBaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9834743424A51793009C4C40 /* Debug */,
+				9834743524A51793009C4C40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 983473FE24A51784009C4C40 /* Project object */;
+}
