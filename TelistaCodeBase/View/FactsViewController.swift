@@ -48,7 +48,13 @@ class FactsViewController: UIViewController, UITableViewDelegate,UITableViewData
     func fetchJsonData(){
         let service : FactsService = FactsService()
         service.delegate = self
-        service.fetchJsonObject()
+        
+        /*Service call Using Alomofire */
+        service.fetchJsonObjectWithAlomofire()
+        
+        /*Service call without Using Alomofire
+        service.fetchJsonObjectWithoutAlomofire()
+            */
     }
     
     @objc func refreshTableView(){

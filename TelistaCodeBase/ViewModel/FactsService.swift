@@ -8,6 +8,8 @@
 
 import UIKit
 import SystemConfiguration
+import Alamofire
+
 
 protocol FetchJsonObjectDelegate: AnyObject {
     func UpdateFactsDataInUI(factsData : FactsModel)
@@ -20,8 +22,7 @@ public class FactsService: NSObject{
     weak var delegate:FetchJsonObjectDelegate?
     var responceData : URLResponse?
     
-    
-    func fetchJsonObject(){
+    func fetchJsonObjectWithoutAlomofire(){
         guard let reachability = SCNetworkReachabilityCreateWithName(nil, "www.google.com") else { return }
         var flags = SCNetworkReachabilityFlags()
         SCNetworkReachabilityGetFlags(reachability, &flags)
@@ -64,6 +65,31 @@ public class FactsService: NSObject{
         }
 
     }
+    
+    // With Alamofire
 
+    func fetchJsonObjectWithAlomofire(){
+        let todoEndpoint: String = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+        AF.request(todoEndpoint)
+          .responseJSON { response in
+            let stringData = NSString.init(data: response.data!, encoding: String.Encoding.ascii.rawValue)
+            let encodedData = stringData?.data(using: String.Encoding.utf8.rawValue)!
+            
+            do{
+                let factsModelData : FactsModel = try FactsModel.init(data: encodedData!)
+                self.delegate?.UpdateFactsDataInUI(factsData: (factsModelData))
+            }
+            catch{
+                self.delegate?.serviceFailedWithError(error: response.error!)
+            }
+          }
+          .responseString { response in
+            if let error = response.error {
+              print(error)
+            }
+            if let value = response.value {
+              print(value)
+            }
+          }
 }
-
+}
