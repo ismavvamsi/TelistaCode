@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -91,7 +91,6 @@
 				24084FF90268B45D4CA9F722 /* Pods-TelistaCodeBaseTests.debug.xcconfig */,
 				09C7A547496943106899F110 /* Pods-TelistaCodeBaseTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -501,7 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "/Users/kameswararao/Desktop/iOS Apps/TelistaCodeBase/TelistaCodeBase/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = TelistaCodeBase/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,7 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "/Users/kameswararao/Desktop/iOS Apps/TelistaCodeBase/TelistaCodeBase/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = TelistaCodeBase/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
