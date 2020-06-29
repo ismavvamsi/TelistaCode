@@ -1,5 +1,5 @@
 //
-//  FactsViewController.swift
+//  ListViewController.swift
 //  TelistaCodeBase
 //
 //  Created by Kameswararao on 26/06/20.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class FactsViewController: UIViewController ,FetchJsonObjectDelegate{
+class ListViewController: UIViewController ,FetchJsonObjectDelegate{
     
-    var canadafactsList : FactsModel!
-    let tableView: UITableView = UITableView()
-    var spinner : UIView?
+    fileprivate var canadafactsList : ListModel!
+    private let tableView: UITableView = UITableView()
+    private var spinner : UIView?
 
     //Initial load of a viewcontroller
     override func viewDidLoad() {
@@ -56,7 +56,7 @@ class FactsViewController: UIViewController ,FetchJsonObjectDelegate{
     
     //Fetching the jsondata
     func fetchJsonData(){
-        let service : FactsService = FactsService()
+        let service : ListService = ListService()
         service.delegate = self
         showSpinner(onView: self.view)
         /*Service call Using Alomofire */
@@ -78,16 +78,16 @@ class FactsViewController: UIViewController ,FetchJsonObjectDelegate{
     
     //Setting Constraints to Tableview to superview
     func setConstraintsForTableView(){
-        let width = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation(rawValue: 0)!, toItem: self.view, attribute: NSLayoutConstraint.Attribute.width, multiplier: 1.0, constant: 0)
-        let height = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation(rawValue: 0)!, toItem: self.view, attribute: NSLayoutConstraint.Attribute.height, multiplier: 1.0, constant: 0)
-        let top = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1.0 , constant: 0)
-        let leading = NSLayoutConstraint(item: self.tableView, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1.0, constant: 0)
+        let width = NSLayoutConstraint(item: self.tableView, attribute: .width, relatedBy: .equal, toItem: self.view, attribute:.width, multiplier: 1.0, constant: 0)
+        let height = NSLayoutConstraint(item: self.tableView, attribute: .height, relatedBy: .equal, toItem: self.view, attribute:.height, multiplier: 1.0, constant: 0)
+        let top = NSLayoutConstraint(item: self.tableView, attribute:.top, relatedBy:.equal, toItem: self.view, attribute:.top, multiplier: 1.0 , constant: 0)
+        let leading = NSLayoutConstraint(item: self.tableView, attribute: .leading, relatedBy:.equal, toItem: self.view, attribute: .leading, multiplier: 1.0, constant: 0)
         self.view.addConstraints([width, height, top, leading])
     }
 }
 
 //Tableview Delegate methods
-extension FactsViewController:UITableViewDelegate{
+extension ListViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard self.canadafactsList == nil else{
             return (self.canadafactsList.rows?.count)!
@@ -95,13 +95,13 @@ extension FactsViewController:UITableViewDelegate{
         return 0
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+   func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 }
 
 //Tableview DataSource methods
-extension FactsViewController:UITableViewDataSource{
+extension ListViewController:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
          guard self.canadafactsList == nil else{
@@ -118,10 +118,10 @@ extension FactsViewController:UITableViewDataSource{
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let identifier : String = "FactsCell"
-         var cell : FactsTableViewCell? = tableView.dequeueReusableCell(withIdentifier: identifier) as? FactsTableViewCell
+         var cell : DataTableViewCell? = tableView.dequeueReusableCell(withIdentifier: identifier) as? DataTableViewCell
 
          if (cell == nil) {
-             cell = FactsTableViewCell(style: UITableViewCell.CellStyle.value2, reuseIdentifier: identifier)
+             cell = DataTableViewCell(style: UITableViewCell.CellStyle.value2, reuseIdentifier: identifier)
          }
          cell?.tag = indexPath.row
          if(canadafactsList != nil){
@@ -163,13 +163,13 @@ extension FactsViewController:UITableViewDataSource{
      }
 }
 
-extension FactsViewController {
+extension ListViewController {
     
     //Showing Loader
-    func showSpinner(onView : UIView) {
+    private func showSpinner(onView : UIView) {
         let spinnerView = UIView.init(frame: onView.bounds)
         spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        let activityIndicator = UIActivityIndicatorView.init(style: .large)
+        let activityIndicator = UIActivityIndicatorView.init(style: .gray)
         activityIndicator.startAnimating()
         activityIndicator.center = spinnerView.center
         
@@ -182,7 +182,7 @@ extension FactsViewController {
     }
     
     //Removing Loader
-    func removeSpinner() {
+    private func removeSpinner() {
         DispatchQueue.main.async {
             self.spinner?.removeFromSuperview()
             self.spinner = nil
@@ -190,7 +190,7 @@ extension FactsViewController {
     }
     
     //Updating UI
-    func UpdateFactsDataInUI(factsData: FactsModel) {
+    internal func UpdateFactsDataInUI(factsData: ListModel) {
         //we should remove any cell which does not have any data
         self.canadafactsList = factsData
         //removing cells with nil content
@@ -202,7 +202,7 @@ extension FactsViewController {
     }
     
     //Displayig error alert if network is failed
-    func networkfailureAlert(message: String) {
+    internal func networkfailureAlert(message: String) {
           DispatchQueue.main.async { [weak self] in
               let alert : UIAlertController = UIAlertController(title: "Error Fetching Facts Data", message: message, preferredStyle: UIAlertController.Style.alert)
               self?.present(alert, animated: true, completion: nil)        }
@@ -210,7 +210,7 @@ extension FactsViewController {
       }
     
       //Displaying error alert if service is failed
-      func serviceFailedWithError(error: Error) {
+    internal func serviceFailedWithError(error: Error) {
           let alert : UIAlertController = UIAlertController(title: "Error Fetching Facts Data", message: error.localizedDescription, preferredStyle: UIAlertController.Style.alert)
           self.present(alert, animated: true, completion: nil)
       }

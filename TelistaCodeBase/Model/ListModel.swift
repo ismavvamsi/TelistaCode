@@ -1,5 +1,5 @@
 //
-//  FactsModel.swift
+//  ListModel.swift
 //  TelistaCodeBase
 //
 //  Created by Kameswararao on 26/06/20.
@@ -8,17 +8,17 @@
 
 import Foundation
 
-class FactsModel: Codable {
+class ListModel: Codable {
     let title: String?
-    var rows: [Row]?
+    var rows: [RowData]?
     
-    init(title: String?, rows: [Row]?) {
+    init(title: String?, rows: [RowData]?) {
         self.title = title
         self.rows = rows
     }
 }
 
-class Row: Codable {
+class RowData: Codable {
     let title, description, imageHref: String?
     
     init(title: String?, description: String?, imageHref: String?) {
@@ -30,9 +30,9 @@ class Row: Codable {
 
 // MARK: Convenience initializers and mutators
 
-extension FactsModel {
+extension ListModel {
     convenience init(data: Data) throws {
-        let me = try JSONDecoder().decode(FactsModel.self, from: data)
+        let me = try JSONDecoder().decode(ListModel.self, from: data)
         self.init(title: me.title, rows: me.rows)
     }
     
@@ -47,28 +47,18 @@ extension FactsModel {
         try self.init(data: try Data(contentsOf: url))
     }
     
-    func with(
-        title: String?? = nil,
-        rows: [Row]?? = nil
-        ) -> FactsModel {
-        return FactsModel(
-            title: title ?? self.title,
-            rows: rows ?? self.rows
-        )
-    }
-    
-    func jsonData() throws -> Data {
+    public func jsonData() throws -> Data {
         return try JSONEncoder().encode(self)
     }
     
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
+    public func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
         return String(data: try self.jsonData(), encoding: encoding)
     }
 }
 
-extension Row {
+extension RowData {
     convenience init(data: Data) throws {
-        let me = try JSONDecoder().decode(Row.self, from: data)
+        let me = try JSONDecoder().decode(RowData.self, from: data)
         self.init(title: me.title, description: me.description, imageHref: me.imageHref)
     }
     
@@ -82,24 +72,11 @@ extension Row {
     convenience init(fromURL url: URL) throws {
         try self.init(data: try Data(contentsOf: url))
     }
-    
-    func with(
-        title: String?? = nil,
-        description: String?? = nil,
-        imageHref: String?? = nil
-        ) -> Row {
-        return Row(
-            title: title ?? self.title,
-            description: description ?? self.description,
-            imageHref: imageHref ?? self.imageHref
-        )
-    }
-    
-    func jsonData() throws -> Data {
+    public func jsonData() throws -> Data {
         return try JSONEncoder().encode(self)
     }
     
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
+    public func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
         return String(data: try self.jsonData(), encoding: encoding)
     }
 }

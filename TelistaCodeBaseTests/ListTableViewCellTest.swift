@@ -10,11 +10,11 @@ import XCTest
 
 @testable import TelistaCodeBase
 
-class FactsTableViewCellTest: XCTestCase {
+class ListTableViewCellTest: XCTestCase {
         
         func testFactsCellElements() {
 
-            let cell : FactsTableViewCell = FactsTableViewCell()
+            let cell : DataTableViewCell = DataTableViewCell()
             //to check if all cell elemts are available or not
             XCTAssert(cell.imageFact != nil);
             XCTAssert(cell.labelDescription != nil);

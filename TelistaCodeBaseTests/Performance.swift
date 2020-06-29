@@ -17,11 +17,10 @@ class Performance: XCTestCase {
             continueAfterFailure = false
         }
         
-       
+// This is an example of a performance test case.
         func testPerformanceExample() {
-            // This is an example of a performance test case.
             self.measure {
-                let service : FactsService = FactsService()
+                let service : ListService = ListService()
                 service.fetchJsonObjectWithoutAlomofire()
             }
         }

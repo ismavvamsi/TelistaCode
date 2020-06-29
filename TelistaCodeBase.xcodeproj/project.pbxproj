@@ -12,13 +12,13 @@
 		9834740A24A51785009C4C40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9834740924A51785009C4C40 /* AppDelegate.swift */; };
 		9834741324A51791009C4C40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9834741224A51791009C4C40 /* Assets.xcassets */; };
 		9834741624A51791009C4C40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9834741424A51791009C4C40 /* LaunchScreen.storyboard */; };
-		985F57DA24A5B8F50050267C /* FactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57D924A5B8F50050267C /* FactsViewController.swift */; };
-		985F57DC24A5B9700050267C /* FactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57DB24A5B9700050267C /* FactsTableViewCell.swift */; };
-		985F57DE24A5B9930050267C /* FactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57DD24A5B9930050267C /* FactsModel.swift */; };
-		985F57E024A5C1D90050267C /* FactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57DF24A5C1D90050267C /* FactsService.swift */; };
+		985F57DA24A5B8F50050267C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57D924A5B8F50050267C /* ListViewController.swift */; };
+		985F57DC24A5B9700050267C /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57DB24A5B9700050267C /* DataTableViewCell.swift */; };
+		985F57DE24A5B9930050267C /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57DD24A5B9930050267C /* ListModel.swift */; };
+		985F57E024A5C1D90050267C /* ListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57DF24A5C1D90050267C /* ListService.swift */; };
 		985F57E824A5E16D0050267C /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57E724A5E16D0050267C /* Performance.swift */; };
-		985F57EC24A5E7000050267C /* FactsTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57EB24A5E7000050267C /* FactsTableViewCellTest.swift */; };
-		985F57EE24A5E75A0050267C /* FactsServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57ED24A5E75A0050267C /* FactsServiceTest.swift */; };
+		985F57EC24A5E7000050267C /* ListTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57EB24A5E7000050267C /* ListTableViewCellTest.swift */; };
+		985F57EE24A5E75A0050267C /* ListServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57ED24A5E75A0050267C /* ListServiceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,13 +44,13 @@
 		9834741724A51792009C4C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9834741C24A51792009C4C40 /* TelistaCodeBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelistaCodeBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9834742224A51792009C4C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		985F57D924A5B8F50050267C /* FactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewController.swift; sourceTree = "<group>"; };
-		985F57DB24A5B9700050267C /* FactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewCell.swift; sourceTree = "<group>"; };
-		985F57DD24A5B9930050267C /* FactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsModel.swift; sourceTree = "<group>"; };
-		985F57DF24A5C1D90050267C /* FactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsService.swift; sourceTree = "<group>"; };
+		985F57D924A5B8F50050267C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		985F57DB24A5B9700050267C /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
+		985F57DD24A5B9930050267C /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		985F57DF24A5C1D90050267C /* ListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListService.swift; sourceTree = "<group>"; };
 		985F57E724A5E16D0050267C /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
-		985F57EB24A5E7000050267C /* FactsTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewCellTest.swift; sourceTree = "<group>"; };
-		985F57ED24A5E75A0050267C /* FactsServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsServiceTest.swift; sourceTree = "<group>"; };
+		985F57EB24A5E7000050267C /* ListTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCellTest.swift; sourceTree = "<group>"; };
+		985F57ED24A5E75A0050267C /* ListServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServiceTest.swift; sourceTree = "<group>"; };
 		E7FF86AC944DA5CA7A9207FD /* Pods_TelistaCodeBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelistaCodeBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,8 +132,8 @@
 			children = (
 				9834742224A51792009C4C40 /* Info.plist */,
 				985F57E724A5E16D0050267C /* Performance.swift */,
-				985F57EB24A5E7000050267C /* FactsTableViewCellTest.swift */,
-				985F57ED24A5E75A0050267C /* FactsServiceTest.swift */,
+				985F57EB24A5E7000050267C /* ListTableViewCellTest.swift */,
+				985F57ED24A5E75A0050267C /* ListServiceTest.swift */,
 			);
 			path = TelistaCodeBaseTests;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 		985F57E324A5DFBD0050267C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				985F57DD24A5B9930050267C /* FactsModel.swift */,
+				985F57DD24A5B9930050267C /* ListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,8 +149,8 @@
 		985F57E424A5DFC80050267C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				985F57DB24A5B9700050267C /* FactsTableViewCell.swift */,
-				985F57D924A5B8F50050267C /* FactsViewController.swift */,
+				985F57DB24A5B9700050267C /* DataTableViewCell.swift */,
+				985F57D924A5B8F50050267C /* ListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 		985F57E524A5DFD00050267C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				985F57DF24A5C1D90050267C /* FactsService.swift */,
+				985F57DF24A5C1D90050267C /* ListService.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -339,11 +339,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				985F57DA24A5B8F50050267C /* FactsViewController.swift in Sources */,
+				985F57DA24A5B8F50050267C /* ListViewController.swift in Sources */,
 				9834740A24A51785009C4C40 /* AppDelegate.swift in Sources */,
-				985F57E024A5C1D90050267C /* FactsService.swift in Sources */,
-				985F57DE24A5B9930050267C /* FactsModel.swift in Sources */,
-				985F57DC24A5B9700050267C /* FactsTableViewCell.swift in Sources */,
+				985F57E024A5C1D90050267C /* ListService.swift in Sources */,
+				985F57DE24A5B9930050267C /* ListModel.swift in Sources */,
+				985F57DC24A5B9700050267C /* DataTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,8 +352,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				985F57E824A5E16D0050267C /* Performance.swift in Sources */,
-				985F57EE24A5E75A0050267C /* FactsServiceTest.swift in Sources */,
-				985F57EC24A5E7000050267C /* FactsTableViewCellTest.swift in Sources */,
+				985F57EE24A5E75A0050267C /* ListServiceTest.swift in Sources */,
+				985F57EC24A5E7000050267C /* ListTableViewCellTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +501,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = TelistaCodeBase/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,6 +522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = TelistaCodeBase/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

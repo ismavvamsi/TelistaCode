@@ -1,5 +1,5 @@
 //
-//  FactsService.swift
+//  ListService.swift
 //  TelistaCodeBase
 //
 //  Created by Kameswararao on 26/06/20.
@@ -12,17 +12,17 @@ import Alamofire
 
 
 protocol FetchJsonObjectDelegate: AnyObject {
-    func UpdateFactsDataInUI(factsData : FactsModel)
+    func UpdateFactsDataInUI(factsData : ListModel)
     func serviceFailedWithError(error : Error)
     func networkfailureAlert(message : String)
 }
 
-public class FactsService: NSObject{
+public class ListService: NSObject{
     
     weak var delegate:FetchJsonObjectDelegate?
     var responceData : URLResponse?
     
-    func fetchJsonObjectWithoutAlomofire(){
+    public func fetchJsonObjectWithoutAlomofire(){
         guard let reachability = SCNetworkReachabilityCreateWithName(nil, "www.google.com") else { return }
         var flags = SCNetworkReachabilityFlags()
         SCNetworkReachabilityGetFlags(reachability, &flags)
@@ -46,7 +46,7 @@ public class FactsService: NSObject{
                     let encodedData = stringData?.data(using: String.Encoding.utf8.rawValue)!
 
                     do{
-                        let factsModelData : FactsModel = try FactsModel.init(data: encodedData!)
+                        let factsModelData : ListModel = try ListModel.init(data: encodedData!)
                         self.delegate?.UpdateFactsDataInUI(factsData: (factsModelData))
                     }
                     catch{
@@ -68,7 +68,7 @@ public class FactsService: NSObject{
     
     // With Alamofire
 
-    func fetchJsonObjectWithAlomofire(){
+    public func fetchJsonObjectWithAlomofire(){
         let todoEndpoint: String = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
         AF.request(todoEndpoint)
           .responseJSON { response in
@@ -76,7 +76,7 @@ public class FactsService: NSObject{
             let encodedData = stringData?.data(using: String.Encoding.utf8.rawValue)!
             
             do{
-                let factsModelData : FactsModel = try FactsModel.init(data: encodedData!)
+                let factsModelData : ListModel = try ListModel.init(data: encodedData!)
                 self.delegate?.UpdateFactsDataInUI(factsData: (factsModelData))
             }
             catch{

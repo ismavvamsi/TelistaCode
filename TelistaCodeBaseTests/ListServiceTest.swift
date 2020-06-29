@@ -14,10 +14,10 @@ import SystemConfiguration
 @testable import TelistaCodeBase
 
 
-class FactsServiceTest: XCTestCase{
+class ListServiceTest: XCTestCase{
     
-    var canadaFactsList : FactsModel?
-    var service : FactsService = FactsService()
+    var canadaFactsList : ListModel?
+    var service : ListService = ListService()
     var sessionUnderTest : URLSession?
 
     override func setUp() {
