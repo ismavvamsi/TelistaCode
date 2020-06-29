@@ -37,12 +37,12 @@
 		24084FF90268B45D4CA9F722 /* Pods-TelistaCodeBaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelistaCodeBaseTests.debug.xcconfig"; path = "Target Support Files/Pods-TelistaCodeBaseTests/Pods-TelistaCodeBaseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		26268F76F22A8150AB7D17A3 /* Pods-TelistaCodeBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelistaCodeBase.release.xcconfig"; path = "Target Support Files/Pods-TelistaCodeBase/Pods-TelistaCodeBase.release.xcconfig"; sourceTree = "<group>"; };
 		97A9660D1BC673277C35DEA0 /* Pods_TelistaCodeBaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelistaCodeBaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9834740624A51784009C4C40 /* TelistaCodeBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelistaCodeBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9834740624A51784009C4C40 /* TelstaCodeBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelstaCodeBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9834740924A51785009C4C40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9834741224A51791009C4C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9834741524A51791009C4C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9834741724A51792009C4C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9834741C24A51792009C4C40 /* TelistaCodeBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelistaCodeBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9834741C24A51792009C4C40 /* TelstaCodeBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelstaCodeBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9834742224A51792009C4C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		985F57D924A5B8F50050267C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		985F57DB24A5B9700050267C /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
@@ -108,8 +108,8 @@
 		9834740724A51784009C4C40 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9834740624A51784009C4C40 /* TelistaCodeBase.app */,
-				9834741C24A51792009C4C40 /* TelistaCodeBaseTests.xctest */,
+				9834740624A51784009C4C40 /* TelstaCodeBase.app */,
+				9834741C24A51792009C4C40 /* TelstaCodeBaseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9834740524A51784009C4C40 /* TelistaCodeBase */ = {
+		9834740524A51784009C4C40 /* TelstaCodeBase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9834743024A51793009C4C40 /* Build configuration list for PBXNativeTarget "TelistaCodeBase" */;
+			buildConfigurationList = 9834743024A51793009C4C40 /* Build configuration list for PBXNativeTarget "TelstaCodeBase" */;
 			buildPhases = (
 				8314C1DAEE7196B08435E4F0 /* [CP] Check Pods Manifest.lock */,
 				9834740224A51784009C4C40 /* Sources */,
@@ -189,14 +189,14 @@
 			);
 			dependencies = (
 			);
-			name = TelistaCodeBase;
+			name = TelstaCodeBase;
 			productName = TelistaCodeBase;
-			productReference = 9834740624A51784009C4C40 /* TelistaCodeBase.app */;
+			productReference = 9834740624A51784009C4C40 /* TelstaCodeBase.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9834741B24A51792009C4C40 /* TelistaCodeBaseTests */ = {
+		9834741B24A51792009C4C40 /* TelstaCodeBaseTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9834743324A51793009C4C40 /* Build configuration list for PBXNativeTarget "TelistaCodeBaseTests" */;
+			buildConfigurationList = 9834743324A51793009C4C40 /* Build configuration list for PBXNativeTarget "TelstaCodeBaseTests" */;
 			buildPhases = (
 				7D8D6A3E7D0AA8127F067FD9 /* [CP] Check Pods Manifest.lock */,
 				9834741824A51792009C4C40 /* Sources */,
@@ -208,9 +208,9 @@
 			dependencies = (
 				9834741E24A51792009C4C40 /* PBXTargetDependency */,
 			);
-			name = TelistaCodeBaseTests;
+			name = TelstaCodeBaseTests;
 			productName = TelistaCodeBaseTests;
-			productReference = 9834741C24A51792009C4C40 /* TelistaCodeBaseTests.xctest */;
+			productReference = 9834741C24A51792009C4C40 /* TelstaCodeBaseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -232,7 +232,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9834740124A51784009C4C40 /* Build configuration list for PBXProject "TelistaCodeBase" */;
+			buildConfigurationList = 9834740124A51784009C4C40 /* Build configuration list for PBXProject "TelstaCodeBase" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -245,8 +245,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9834740524A51784009C4C40 /* TelistaCodeBase */,
-				9834741B24A51792009C4C40 /* TelistaCodeBaseTests */,
+				9834740524A51784009C4C40 /* TelstaCodeBase */,
+				9834741B24A51792009C4C40 /* TelstaCodeBaseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -362,7 +362,7 @@
 /* Begin PBXTargetDependency section */
 		9834741E24A51792009C4C40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9834740524A51784009C4C40 /* TelistaCodeBase */;
+			target = 9834740524A51784009C4C40 /* TelstaCodeBase */;
 			targetProxy = 9834741D24A51792009C4C40 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -553,7 +553,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TelistaCodeBase.app/TelistaCodeBase";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TelstaCodeBase.app/TelstaCodeBase";
 			};
 			name = Debug;
 		};
@@ -575,14 +575,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TelistaCodeBase.app/TelistaCodeBase";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TelstaCodeBase.app/TelstaCodeBase";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9834740124A51784009C4C40 /* Build configuration list for PBXProject "TelistaCodeBase" */ = {
+		9834740124A51784009C4C40 /* Build configuration list for PBXProject "TelstaCodeBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9834742E24A51793009C4C40 /* Debug */,
@@ -591,7 +591,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9834743024A51793009C4C40 /* Build configuration list for PBXNativeTarget "TelistaCodeBase" */ = {
+		9834743024A51793009C4C40 /* Build configuration list for PBXNativeTarget "TelstaCodeBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9834743124A51793009C4C40 /* Debug */,
@@ -600,7 +600,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9834743324A51793009C4C40 /* Build configuration list for PBXNativeTarget "TelistaCodeBaseTests" */ = {
+		9834743324A51793009C4C40 /* Build configuration list for PBXNativeTarget "TelstaCodeBaseTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9834743424A51793009C4C40 /* Debug */,
