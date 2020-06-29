@@ -20,18 +20,10 @@ class FactsServiceTest: XCTestCase{
     var service : FactsService = FactsService()
     var sessionUnderTest : URLSession?
 
-
-
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         sessionUnderTest = URLSession(configuration: URLSessionConfiguration.default)
 
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
     }
     
     func testNetworkRechability(){
@@ -65,9 +57,13 @@ class FactsServiceTest: XCTestCase{
     }
     
     func testServiceMethodCall() {
-        service.fetchJsonObject()
-    }
-    
+         service.fetchJsonObjectWithAlomofire()
+     }
+     
+     func testServiceWithoutAlomofire(){
+         service.fetchJsonObjectWithoutAlomofire()
+     }
+     
     func testService() {
         
         let facctsJsonString: String = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"

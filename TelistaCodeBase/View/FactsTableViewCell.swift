@@ -13,24 +13,38 @@ class FactsTableViewCell: UITableViewCell {
     let labelDescription : UILabel! = UILabel()
     let imageFact : UIImageView! = UIImageView()
 
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        // creating the title label programatically and adding to conatiner view
-        labelTitle.font = UIFont(name: "Arial-BoldMT", size: 17)
-        labelTitle.tag = 1
-        labelTitle.textColor = UIColor.black
-        labelTitle.backgroundColor = UIColor.clear
-        labelTitle.numberOfLines = 0
-        labelTitle.translatesAutoresizingMaskIntoConstraints = false;
-        labelTitle.preferredMaxLayoutWidth = self.frame.size.width;// assumes the parent view has its frame already set.
-        labelTitle.text = "No title available"
-        labelTitle.sizeToFit()
-        labelTitle.setNeedsDisplay()
-        self.contentView.addSubview(labelTitle)
-        
-        // creating the title label programatically and adding to conatiner view
+        createTitleLabel()
+        createDescLabel()
+        createImageView()
+        setConstraints()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension FactsTableViewCell{
+    
+// creating the title label programatically and adding to conatiner view
+    func createTitleLabel(){
+          labelTitle.font = UIFont(name: "Arial-BoldMT", size: 17)
+          labelTitle.tag = 1
+          labelTitle.textColor = UIColor.black
+          labelTitle.backgroundColor = UIColor.clear
+          labelTitle.numberOfLines = 0
+          labelTitle.translatesAutoresizingMaskIntoConstraints = false;
+          labelTitle.preferredMaxLayoutWidth = self.frame.size.width;// assumes the parent view has its frame already set.
+          labelTitle.text = "No title available"
+          labelTitle.sizeToFit()
+          labelTitle.setNeedsDisplay()
+          self.contentView.addSubview(labelTitle)
+    }
+    
+// creating the title label programatically and adding to conatiner view
+    func createDescLabel(){
         labelDescription.font = UIFont(name: "Arial", size: 15)
         labelDescription.tag = 1
         labelDescription.textColor = UIColor.darkText
@@ -41,13 +55,17 @@ class FactsTableViewCell: UITableViewCell {
         labelDescription.sizeToFit()
         labelDescription.setNeedsDisplay()
         self.contentView.addSubview(labelDescription)
-        
-        // creating the UIImage programatically and adding to conatiner view
+    }
+    
+// creating the UIImage programatically and adding to conatiner view
+    func createImageView(){
         imageFact.translatesAutoresizingMaskIntoConstraints = false
         imageFact.backgroundColor = UIColor.darkGray
         self.contentView.addSubview(imageFact)
-        
-        //setting up layout constrains to fit the title, description and image into the cell
+    }
+    
+//setting up layout constrains to fit the title, description and image into the cell
+    func setConstraints(){
         let left : NSLayoutConstraint = NSLayoutConstraint.init(item: self.labelTitle as Any, attribute: NSLayoutConstraint.Attribute.left, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.contentView, attribute: NSLayoutConstraint.Attribute.left, multiplier: 1, constant: 5)
         let top : NSLayoutConstraint = NSLayoutConstraint.init(item: self.labelTitle as Any, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.contentView, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 5)
         let right : NSLayoutConstraint = NSLayoutConstraint.init(item: self.labelTitle as Any, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.contentView, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: 5)
@@ -65,22 +83,5 @@ class FactsTableViewCell: UITableViewCell {
         let bottomImage : NSLayoutConstraint = NSLayoutConstraint.init(item: self.imageFact as Any, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.contentView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: -10)
         NSLayoutConstraint.activate([topImage, leftImage, heightImage,widthImage,bottomImage])
         self.contentView.addConstraints([topImage, leftImage, heightImage,widthImage,bottomImage])
-
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
-    }
-
 }
-
