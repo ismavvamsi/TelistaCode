@@ -67,16 +67,20 @@ public class ListService: NSObject {
         let todoEndpoint: String = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
         AF.request(todoEndpoint)
           .responseJSON { response in
-            let stringData = NSString.init(data: response.data!, encoding: String.Encoding.ascii.rawValue)
-            let encodedData = stringData?.data(using: String.Encoding.utf8.rawValue)!
-            
+            if let data = response.data {
+            let stringData = NSString.init(data: data, encoding: String.Encoding.ascii.rawValue)
+            let encodedData = stringData?.data(using: String.Encoding.utf8.rawValue)
             do {
-                let factsModelData: ListModel = try ListModel.init(data: encodedData!)
-                self.delegate?.UpdateFactsDataInUI(factsData: (factsModelData))
+                if let encodeData = encodedData {
+                    let factsModelData: ListModel = try ListModel.init(data: encodeData)
+                    self.delegate?.UpdateFactsDataInUI(factsData: (factsModelData))
+                }
             } catch {
-                self.delegate?.serviceFailedWithError(error: response.error!)
+                    self.delegate?.serviceFailedWithError(error: error)
+                
             }
           }
+        }
           .responseString { response in
             if let error = response.error {
               print(error)
