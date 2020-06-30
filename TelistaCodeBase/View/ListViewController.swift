@@ -11,7 +11,7 @@ import UIKit
 class ListViewController: UIViewController, FetchJsonObjectDelegate {
     
     fileprivate var canadafactsList: ListModel!
-    private let tableView: UITableView = UITableView()
+    let tableView: UITableView = UITableView()
     private var spinner: UIView?
 
     //Initial load of a viewcontroller

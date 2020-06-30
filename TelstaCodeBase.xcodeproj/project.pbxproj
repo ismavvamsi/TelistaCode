@@ -19,6 +19,7 @@
 		985F57E824A5E16D0050267C /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57E724A5E16D0050267C /* Performance.swift */; };
 		985F57EC24A5E7000050267C /* ListTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57EB24A5E7000050267C /* ListTableViewCellTest.swift */; };
 		985F57EE24A5E75A0050267C /* ListServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57ED24A5E75A0050267C /* ListServiceTest.swift */; };
+		98E8275324AB1364006E77FB /* TelstaCodeBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E8275224AB1364006E77FB /* TelstaCodeBaseUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9834740524A51784009C4C40;
 			remoteInfo = TelistaCodeBase;
+		};
+		98E8275524AB1364006E77FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 983473FE24A51784009C4C40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9834740524A51784009C4C40;
+			remoteInfo = TelstaCodeBase;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,6 +63,9 @@
 		985F57E724A5E16D0050267C /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
 		985F57EB24A5E7000050267C /* ListTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCellTest.swift; sourceTree = "<group>"; };
 		985F57ED24A5E75A0050267C /* ListServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServiceTest.swift; sourceTree = "<group>"; };
+		98E8275024AB1364006E77FB /* TelstaCodeBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelstaCodeBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E8275224AB1364006E77FB /* TelstaCodeBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelstaCodeBaseUITests.swift; sourceTree = "<group>"; };
+		98E8275424AB1364006E77FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F134C1A724DD000EA328EBFC /* Pods_TelstaCodeBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelstaCodeBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,6 +83,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				41A3E5991450BDE9CBDF83C4 /* Pods_TelstaCodeBaseTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E8274D24AB1364006E77FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +125,7 @@
 			children = (
 				9834740824A51784009C4C40 /* TelistaCodeBase */,
 				9834741F24A51792009C4C40 /* TelistaCodeBaseTests */,
+				98E8275124AB1364006E77FB /* TelstaCodeBaseUITests */,
 				9834740724A51784009C4C40 /* Products */,
 				07EEE0BCA68CB053D4BE2FA8 /* Pods */,
 				01887F7061387914F2335B05 /* Frameworks */,
@@ -118,6 +137,7 @@
 			children = (
 				9834740624A51784009C4C40 /* TelstaCodeBase.app */,
 				9834741C24A51792009C4C40 /* TelstaCodeBaseTests.xctest */,
+				98E8275024AB1364006E77FB /* TelstaCodeBaseUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,6 +200,15 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		98E8275124AB1364006E77FB /* TelstaCodeBaseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				98E8275224AB1364006E77FB /* TelstaCodeBaseUITests.swift */,
+				98E8275424AB1364006E77FB /* Info.plist */,
+			);
+			path = TelstaCodeBaseUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +251,24 @@
 			productReference = 9834741C24A51792009C4C40 /* TelstaCodeBaseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		98E8274F24AB1364006E77FB /* TelstaCodeBaseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98E8275724AB1364006E77FB /* Build configuration list for PBXNativeTarget "TelstaCodeBaseUITests" */;
+			buildPhases = (
+				98E8274C24AB1364006E77FB /* Sources */,
+				98E8274D24AB1364006E77FB /* Frameworks */,
+				98E8274E24AB1364006E77FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98E8275624AB1364006E77FB /* PBXTargetDependency */,
+			);
+			name = TelstaCodeBaseUITests;
+			productName = TelstaCodeBaseUITests;
+			productReference = 98E8275024AB1364006E77FB /* TelstaCodeBaseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -236,6 +283,10 @@
 						CreatedOnToolsVersion = 11.4.1;
 					};
 					9834741B24A51792009C4C40 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 9834740524A51784009C4C40;
+					};
+					98E8274F24AB1364006E77FB = {
 						CreatedOnToolsVersion = 11.4.1;
 						TestTargetID = 9834740524A51784009C4C40;
 					};
@@ -256,6 +307,7 @@
 			targets = (
 				9834740524A51784009C4C40 /* TelstaCodeBase */,
 				9834741B24A51792009C4C40 /* TelstaCodeBaseTests */,
+				98E8274F24AB1364006E77FB /* TelstaCodeBaseUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -271,6 +323,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9834741A24A51792009C4C40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E8274E24AB1364006E77FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -383,6 +442,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		98E8274C24AB1364006E77FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98E8275324AB1364006E77FB /* TelstaCodeBaseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -390,6 +457,11 @@
 			isa = PBXTargetDependency;
 			target = 9834740524A51784009C4C40 /* TelstaCodeBase */;
 			targetProxy = 9834741D24A51792009C4C40 /* PBXContainerItemProxy */;
+		};
+		98E8275624AB1364006E77FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9834740524A51784009C4C40 /* TelstaCodeBase */;
+			targetProxy = 98E8275524AB1364006E77FB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -605,6 +677,42 @@
 			};
 			name = Release;
 		};
+		98E8275824AB1364006E77FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TelstaCodeBaseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vamsi.com.TelstaCodeBaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TelstaCodeBase;
+			};
+			name = Debug;
+		};
+		98E8275924AB1364006E77FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TelstaCodeBaseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vamsi.com.TelstaCodeBaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TelstaCodeBase;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -631,6 +739,15 @@
 			buildConfigurations = (
 				9834743424A51793009C4C40 /* Debug */,
 				9834743524A51793009C4C40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98E8275724AB1364006E77FB /* Build configuration list for PBXNativeTarget "TelstaCodeBaseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98E8275824AB1364006E77FB /* Debug */,
+				98E8275924AB1364006E77FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

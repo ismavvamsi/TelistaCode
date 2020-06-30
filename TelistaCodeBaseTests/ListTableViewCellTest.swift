@@ -8,16 +8,20 @@
 
 import XCTest
 
-@testable import TelistaCodeBase
+@testable import TelstaCodeBase
 
 class ListTableViewCellTest: XCTestCase {
-        
+        let cell: DataTableViewCell = DataTableViewCell()
+
         func testFactsCellElements() {
 
-            let cell: DataTableViewCell = DataTableViewCell()
             //to check if all cell elemts are available or not
             XCTAssert(cell.imageFact != nil)
             XCTAssert(cell.labelDescription != nil)
             XCTAssert(cell.labelTitle != nil)
         }
+    
+    func testViewControllerIsComposedOfLabel() {
+          XCTAssertNotNil(self.cell.labelDescription, "Cell under test is not composed of a UILabel")
+      }
 }
