@@ -1,6 +1,0 @@
-framework module Pods_TelistaCodeBase {
-  umbrella header "Pods-TelistaCodeBase-umbrella.h"
-
-  export *
-  module * { export * }
-}

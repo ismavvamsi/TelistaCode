@@ -8,7 +8,7 @@
 
 import XCTest
 
-@testable import TelistaCodeBase
+@testable import TelstaCodeBase
 
 class Performance: XCTestCase {
             
@@ -20,7 +20,7 @@ class Performance: XCTestCase {
 // This is an example of a performance test case.
         func testPerformanceExample() {
             self.measure {
-                let service : ListService = ListService()
+                let service: ListService = ListService()
                 service.fetchJsonObjectWithoutAlomofire()
             }
         }

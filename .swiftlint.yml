@@ -1,0 +1,15 @@
+line_length:
+- 300 # warning
+- 350 # error
+type_body_length:
+- 500 # error
+type_name:
+  allowed_symbols: "_"
+disabled_rules:
+- trailing_whitespace
+- file_length
+- identifier_name
+- control_statement
+- Type Name
+excluded:
+  - Pods

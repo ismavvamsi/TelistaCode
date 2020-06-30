@@ -11,14 +11,13 @@ import UIKit
 import XCTest
 import SystemConfiguration
 
-@testable import TelistaCodeBase
+@testable import TelstaCodeBase
 
-
-class ListServiceTest: XCTestCase{
+class ListServiceTest: XCTestCase {
     
-    var canadaFactsList : ListModel?
-    var service : ListService = ListService()
-    var sessionUnderTest : URLSession?
+    var canadaFactsList: ListModel?
+    var service: ListService = ListService()
+    var sessionUnderTest: URLSession?
 
     override func setUp() {
         super.setUp()
@@ -26,16 +25,14 @@ class ListServiceTest: XCTestCase{
 
     }
     
-    func testNetworkRechability(){
+    func testNetworkRechability() {
         guard let reachability = SCNetworkReachabilityCreateWithName(nil, "www.google.com") else { return }
         
         var flags = SCNetworkReachabilityFlags()
         SCNetworkReachabilityGetFlags(reachability, &flags)
         
-        if(flags.contains(.reachable)){
-            print("Internet connection is active")
-        }
-        else{
+        if(flags.contains(.reachable)) {
+            print("Internet connection is active") } else {
             print("No Internet connection")
         }
     }
@@ -46,12 +43,12 @@ class ListServiceTest: XCTestCase{
 
         let facctsJsonString: String = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
         let factsUrl = URL(string: facctsJsonString)
-        let urlRequest : URLRequest? = URLRequest(url: factsUrl!)
+        let urlRequest: URLRequest? = URLRequest(url: factsUrl!)
         XCTAssert(urlRequest != nil)
     }
     
-    func testJsonContent(){
-        var data : NSData? = NSData()
+    func testJsonContent() {
+        var data: NSData? = NSData()
         data =  NSData(contentsOf: URL(string: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json")!)
         XCTAssert(data != nil)
     }
@@ -60,7 +57,7 @@ class ListServiceTest: XCTestCase{
          service.fetchJsonObjectWithAlomofire()
      }
      
-     func testServiceWithoutAlomofire(){
+     func testServiceWithoutAlomofire() {
          service.fetchJsonObjectWithoutAlomofire()
      }
      
@@ -72,10 +69,7 @@ class ListServiceTest: XCTestCase{
         
         let promise = expectation(description: "data != nil")
         
-        let task = sessionUnderTest?.dataTask(with: urlRequest)
-        {
-            (data, response, error) in
-            
+        let task = sessionUnderTest?.dataTask(with: urlRequest) { ( _, _, error ) in
             if let error = error {
                 XCTFail("Error: \(error.localizedDescription)")
                 return
@@ -85,6 +79,4 @@ class ListServiceTest: XCTestCase{
         task?.resume()
         waitForExpectations(timeout: 5, handler: nil)
     }
-
-    
 }

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ListViewController: UIViewController ,FetchJsonObjectDelegate{
+class ListViewController: UIViewController, FetchJsonObjectDelegate {
     
-    fileprivate var canadafactsList : ListModel!
+    fileprivate var canadafactsList: ListModel!
     private let tableView: UITableView = UITableView()
-    private var spinner : UIView?
+    private var spinner: UIView?
 
     //Initial load of a viewcontroller
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class ListViewController: UIViewController ,FetchJsonObjectDelegate{
     }
     
     //Adding delegate and datsource to presennt data on table view
-    func addTableView(){
+    func addTableView() {
         tableView.frame = self.view.frame
         tableView.dataSource = self
         tableView.delegate = self
@@ -43,9 +43,9 @@ class ListViewController: UIViewController ,FetchJsonObjectDelegate{
     }
     
     //creating 'Pull down to refresh' functionalty using refreshController
-    func pullToRefresh(){
-        let factsRefreshControl : UIRefreshControl = UIRefreshControl()
-        tableView.refreshControl = factsRefreshControl;
+    func pullToRefresh() {
+        let factsRefreshControl: UIRefreshControl = UIRefreshControl()
+        tableView.refreshControl = factsRefreshControl
         tableView.refreshControl?.addTarget(self, action: #selector(refreshTableView), for: UIControl.Event.valueChanged)
     }
     
@@ -55,8 +55,8 @@ class ListViewController: UIViewController ,FetchJsonObjectDelegate{
     }
     
     //Fetching the jsondata
-    func fetchJsonData(){
-        let service : ListService = ListService()
+    func fetchJsonData() {
+        let service: ListService = ListService()
         service.delegate = self
         showSpinner(onView: self.view)
         /*Service call Using Alomofire */
@@ -68,8 +68,8 @@ class ListViewController: UIViewController ,FetchJsonObjectDelegate{
     }
     
     //Refreshing the view controller
-    @objc func refreshTableView(){
-        if((tableView.refreshControl) != nil){
+    @objc func refreshTableView() {
+        if((tableView.refreshControl) != nil) {
             fetchJsonData()
             tableView.reloadData()
             tableView.refreshControl?.endRefreshing()
@@ -77,19 +77,19 @@ class ListViewController: UIViewController ,FetchJsonObjectDelegate{
     }
     
     //Setting Constraints to Tableview to superview
-    func setConstraintsForTableView(){
-        let width = NSLayoutConstraint(item: self.tableView, attribute: .width, relatedBy: .equal, toItem: self.view, attribute:.width, multiplier: 1.0, constant: 0)
-        let height = NSLayoutConstraint(item: self.tableView, attribute: .height, relatedBy: .equal, toItem: self.view, attribute:.height, multiplier: 1.0, constant: 0)
-        let top = NSLayoutConstraint(item: self.tableView, attribute:.top, relatedBy:.equal, toItem: self.view, attribute:.top, multiplier: 1.0 , constant: 0)
-        let leading = NSLayoutConstraint(item: self.tableView, attribute: .leading, relatedBy:.equal, toItem: self.view, attribute: .leading, multiplier: 1.0, constant: 0)
+    func setConstraintsForTableView() {
+        let width = NSLayoutConstraint(item: self.tableView, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 1.0, constant: 0)
+        let height = NSLayoutConstraint(item: self.tableView, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 1.0, constant: 0)
+        let top = NSLayoutConstraint(item: self.tableView, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 0)
+        let leading = NSLayoutConstraint(item: self.tableView, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1.0, constant: 0)
         self.view.addConstraints([width, height, top, leading])
     }
 }
 
 //Tableview Delegate methods
-extension ListViewController:UITableViewDelegate{
+extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard self.canadafactsList == nil else{
+        guard self.canadafactsList == nil else {
             return (self.canadafactsList.rows?.count)!
         }
         return 0
@@ -101,10 +101,10 @@ extension ListViewController:UITableViewDelegate{
 }
 
 //Tableview DataSource methods
-extension ListViewController:UITableViewDataSource{
+extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-         guard self.canadafactsList == nil else{
+         guard self.canadafactsList == nil else {
              let title =  self.canadafactsList.title
              
              return title
@@ -117,27 +117,27 @@ extension ListViewController:UITableViewDataSource{
      }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let identifier : String = "FactsCell"
-         var cell : DataTableViewCell? = tableView.dequeueReusableCell(withIdentifier: identifier) as? DataTableViewCell
+         let identifier: String = "FactsCell"
+         var cell: DataTableViewCell? = tableView.dequeueReusableCell(withIdentifier: identifier) as? DataTableViewCell
 
          if (cell == nil) {
              cell = DataTableViewCell(style: UITableViewCell.CellStyle.value2, reuseIdentifier: identifier)
          }
          cell?.tag = indexPath.row
-         if(canadafactsList != nil){
+         if(canadafactsList != nil) {
              cell?.labelTitle.text = self.canadafactsList.rows![indexPath.row].title
              cell?.labelDescription.text = self.canadafactsList.rows![indexPath.row].description
-             cell?.imageFact.image = UIImage(named: "noImage");
+             cell?.imageFact.image = UIImage(named: "noImage")
 
-             DispatchQueue.global(qos: .userInteractive).async{ [weak self] in
-                 let urlString : String? = self?.canadafactsList.rows![indexPath.row].imageHref
-                 guard  urlString == nil else{
-                     let url : URL? = URL(string: urlString!)
-                     do{
-                         let imageData : Data = try Data(contentsOf: url!)
-                         guard UIImage(data: imageData) == nil else{
-                             let image : UIImage? = UIImage(data: imageData)!
-                             if(image != nil){
+             DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+                 let urlString: String? = self?.canadafactsList.rows![indexPath.row].imageHref
+                 guard  urlString == nil else {
+                     let url: URL? = URL(string: urlString!)
+                     do {
+                         let imageData: Data = try Data(contentsOf: url!)
+                         guard UIImage(data: imageData) == nil else {
+                             let image: UIImage? = UIImage(data: imageData)!
+                             if(image != nil) {
                                  DispatchQueue.main.async {
                                      if (cell?.tag == indexPath.row) {
                                          cell?.imageFact.image = image
@@ -148,8 +148,7 @@ extension ListViewController:UITableViewDataSource{
                              return
                          }
                              return
-                     }
-                     catch{
+                     } catch {
                       print("Unable to find image from server")
                      }
                      return
@@ -166,7 +165,7 @@ extension ListViewController:UITableViewDataSource{
 extension ListViewController {
     
     //Showing Loader
-    private func showSpinner(onView : UIView) {
+    private func showSpinner(onView: UIView) {
         let spinnerView = UIView.init(frame: onView.bounds)
         spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
         let activityIndicator = UIActivityIndicatorView.init(style: .gray)
@@ -204,16 +203,14 @@ extension ListViewController {
     //Displayig error alert if network is failed
     internal func networkfailureAlert(message: String) {
           DispatchQueue.main.async { [weak self] in
-              let alert : UIAlertController = UIAlertController(title: "Error Fetching Facts Data", message: message, preferredStyle: UIAlertController.Style.alert)
+              let alert: UIAlertController = UIAlertController(title: "Error Fetching Facts Data", message: message, preferredStyle: UIAlertController.Style.alert)
               self?.present(alert, animated: true, completion: nil)        }
 
       }
     
       //Displaying error alert if service is failed
     internal func serviceFailedWithError(error: Error) {
-          let alert : UIAlertController = UIAlertController(title: "Error Fetching Facts Data", message: error.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+          let alert: UIAlertController = UIAlertController(title: "Error Fetching Facts Data", message: error.localizedDescription, preferredStyle: UIAlertController.Style.alert)
           self.present(alert, animated: true, completion: nil)
       }
-    
-    
 }

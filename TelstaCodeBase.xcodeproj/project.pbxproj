@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6FC455FF2A214FCFA2F86EF3 /* Pods_TelistaCodeBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7FF86AC944DA5CA7A9207FD /* Pods_TelistaCodeBase.framework */; };
-		923236B0C625735CBC9D8250 /* Pods_TelistaCodeBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A9660D1BC673277C35DEA0 /* Pods_TelistaCodeBaseTests.framework */; };
+		3544475B8619DB3471C8E9BF /* Pods_TelstaCodeBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F134C1A724DD000EA328EBFC /* Pods_TelstaCodeBase.framework */; };
+		41A3E5991450BDE9CBDF83C4 /* Pods_TelstaCodeBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C27E1EE41FA60B746BA3315 /* Pods_TelstaCodeBaseTests.framework */; };
 		9834740A24A51785009C4C40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9834740924A51785009C4C40 /* AppDelegate.swift */; };
 		9834741324A51791009C4C40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9834741224A51791009C4C40 /* Assets.xcassets */; };
 		9834741624A51791009C4C40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9834741424A51791009C4C40 /* LaunchScreen.storyboard */; };
@@ -36,7 +36,11 @@
 		1ABC673E68562826D568DD50 /* Pods-TelistaCodeBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelistaCodeBase.debug.xcconfig"; path = "Target Support Files/Pods-TelistaCodeBase/Pods-TelistaCodeBase.debug.xcconfig"; sourceTree = "<group>"; };
 		24084FF90268B45D4CA9F722 /* Pods-TelistaCodeBaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelistaCodeBaseTests.debug.xcconfig"; path = "Target Support Files/Pods-TelistaCodeBaseTests/Pods-TelistaCodeBaseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		26268F76F22A8150AB7D17A3 /* Pods-TelistaCodeBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelistaCodeBase.release.xcconfig"; path = "Target Support Files/Pods-TelistaCodeBase/Pods-TelistaCodeBase.release.xcconfig"; sourceTree = "<group>"; };
-		97A9660D1BC673277C35DEA0 /* Pods_TelistaCodeBaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelistaCodeBaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C70014F65A11C2F6192CDC6 /* Pods-TelstaCodeBaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelstaCodeBaseTests.debug.xcconfig"; path = "Target Support Files/Pods-TelstaCodeBaseTests/Pods-TelstaCodeBaseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		60462D8BF0595C86C5916F87 /* Pods-TelstaCodeBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelstaCodeBase.release.xcconfig"; path = "Target Support Files/Pods-TelstaCodeBase/Pods-TelstaCodeBase.release.xcconfig"; sourceTree = "<group>"; };
+		687E83C9F95C10F7C2886E44 /* Pods-TelstaCodeBaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelstaCodeBaseTests.release.xcconfig"; path = "Target Support Files/Pods-TelstaCodeBaseTests/Pods-TelstaCodeBaseTests.release.xcconfig"; sourceTree = "<group>"; };
+		8BDD9DE160A3E96E9A555CA8 /* Pods-TelstaCodeBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelstaCodeBase.debug.xcconfig"; path = "Target Support Files/Pods-TelstaCodeBase/Pods-TelstaCodeBase.debug.xcconfig"; sourceTree = "<group>"; };
+		8C27E1EE41FA60B746BA3315 /* Pods_TelstaCodeBaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelstaCodeBaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9834740624A51784009C4C40 /* TelstaCodeBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelstaCodeBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9834740924A51785009C4C40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9834741224A51791009C4C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,7 +55,7 @@
 		985F57E724A5E16D0050267C /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
 		985F57EB24A5E7000050267C /* ListTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCellTest.swift; sourceTree = "<group>"; };
 		985F57ED24A5E75A0050267C /* ListServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServiceTest.swift; sourceTree = "<group>"; };
-		E7FF86AC944DA5CA7A9207FD /* Pods_TelistaCodeBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelistaCodeBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F134C1A724DD000EA328EBFC /* Pods_TelstaCodeBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelstaCodeBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FC455FF2A214FCFA2F86EF3 /* Pods_TelistaCodeBase.framework in Frameworks */,
+				3544475B8619DB3471C8E9BF /* Pods_TelstaCodeBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				923236B0C625735CBC9D8250 /* Pods_TelistaCodeBaseTests.framework in Frameworks */,
+				41A3E5991450BDE9CBDF83C4 /* Pods_TelstaCodeBaseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +81,8 @@
 		01887F7061387914F2335B05 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E7FF86AC944DA5CA7A9207FD /* Pods_TelistaCodeBase.framework */,
-				97A9660D1BC673277C35DEA0 /* Pods_TelistaCodeBaseTests.framework */,
+				F134C1A724DD000EA328EBFC /* Pods_TelstaCodeBase.framework */,
+				8C27E1EE41FA60B746BA3315 /* Pods_TelstaCodeBaseTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,6 +94,10 @@
 				26268F76F22A8150AB7D17A3 /* Pods-TelistaCodeBase.release.xcconfig */,
 				24084FF90268B45D4CA9F722 /* Pods-TelistaCodeBaseTests.debug.xcconfig */,
 				09C7A547496943106899F110 /* Pods-TelistaCodeBaseTests.release.xcconfig */,
+				8BDD9DE160A3E96E9A555CA8 /* Pods-TelstaCodeBase.debug.xcconfig */,
+				60462D8BF0595C86C5916F87 /* Pods-TelstaCodeBase.release.xcconfig */,
+				2C70014F65A11C2F6192CDC6 /* Pods-TelstaCodeBaseTests.debug.xcconfig */,
+				687E83C9F95C10F7C2886E44 /* Pods-TelstaCodeBaseTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 				9834740324A51784009C4C40 /* Frameworks */,
 				9834740424A51784009C4C40 /* Resources */,
 				EAB1BFE59D40A9DC6F0BC726 /* [CP] Embed Pods Frameworks */,
+				98E8274924AAFF80006E77FB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -286,7 +295,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TelistaCodeBaseTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TelstaCodeBaseTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -308,12 +317,29 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TelistaCodeBase-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TelstaCodeBase-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		98E8274924AAFF80006E77FB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		EAB1BFE59D40A9DC6F0BC726 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -321,15 +347,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TelistaCodeBase/Pods-TelistaCodeBase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TelstaCodeBase/Pods-TelstaCodeBase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TelistaCodeBase/Pods-TelistaCodeBase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TelstaCodeBase/Pods-TelstaCodeBase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TelistaCodeBase/Pods-TelistaCodeBase-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TelstaCodeBase/Pods-TelstaCodeBase-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -495,7 +521,7 @@
 		};
 		9834743124A51793009C4C40 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ABC673E68562826D568DD50 /* Pods-TelistaCodeBase.debug.xcconfig */;
+			baseConfigurationReference = 8BDD9DE160A3E96E9A555CA8 /* Pods-TelstaCodeBase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -516,7 +542,7 @@
 		};
 		9834743224A51793009C4C40 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26268F76F22A8150AB7D17A3 /* Pods-TelistaCodeBase.release.xcconfig */;
+			baseConfigurationReference = 60462D8BF0595C86C5916F87 /* Pods-TelstaCodeBase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -537,7 +563,7 @@
 		};
 		9834743424A51793009C4C40 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24084FF90268B45D4CA9F722 /* Pods-TelistaCodeBaseTests.debug.xcconfig */;
+			baseConfigurationReference = 2C70014F65A11C2F6192CDC6 /* Pods-TelstaCodeBaseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -559,7 +585,7 @@
 		};
 		9834743524A51793009C4C40 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09C7A547496943106899F110 /* Pods-TelistaCodeBaseTests.release.xcconfig */;
+			baseConfigurationReference = 687E83C9F95C10F7C2886E44 /* Pods-TelstaCodeBaseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

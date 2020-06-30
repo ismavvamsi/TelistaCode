@@ -14,13 +14,10 @@ class ListTableViewCellTest: XCTestCase {
         
         func testFactsCellElements() {
 
-            let cell : DataTableViewCell = DataTableViewCell()
+            let cell: DataTableViewCell = DataTableViewCell()
             //to check if all cell elemts are available or not
-            XCTAssert(cell.imageFact != nil);
-            XCTAssert(cell.labelDescription != nil);
-            XCTAssert(cell.labelTitle != nil);
+            XCTAssert(cell.imageFact != nil)
+            XCTAssert(cell.labelDescription != nil)
+            XCTAssert(cell.labelTitle != nil)
         }
-        
-
-        
-    }
+}

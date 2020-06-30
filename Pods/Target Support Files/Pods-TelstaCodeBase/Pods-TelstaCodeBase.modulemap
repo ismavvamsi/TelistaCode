@@ -1,0 +1,6 @@
+framework module Pods_TelstaCodeBase {
+  umbrella header "Pods-TelstaCodeBase-umbrella.h"
+
+  export *
+  module * { export * }
+}

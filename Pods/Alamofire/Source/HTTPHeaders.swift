@@ -406,7 +406,6 @@ extension HTTPHeader {
         return .userAgent(userAgent)
     }()
 }
-
 extension Collection where Element == String {
     func qualityEncoded() -> String {
         enumerated().map { index, encoding in
@@ -415,9 +414,7 @@ extension Collection where Element == String {
         }.joined(separator: ", ")
     }
 }
-
 // MARK: - System Type Extensions
-
 extension URLRequest {
     /// Returns `allHTTPHeaderFields` as `HTTPHeaders`.
     public var headers: HTTPHeaders {
@@ -425,14 +422,12 @@ extension URLRequest {
         set { allHTTPHeaderFields = newValue.dictionary }
     }
 }
-
 extension HTTPURLResponse {
     /// Returns `allHeaderFields` as `HTTPHeaders`.
     public var headers: HTTPHeaders {
         (allHeaderFields as? [String: String]).map(HTTPHeaders.init) ?? HTTPHeaders()
     }
 }
-
 public extension URLSessionConfiguration {
     /// Returns `httpAdditionalHeaders` as `HTTPHeaders`.
     var headers: HTTPHeaders {
