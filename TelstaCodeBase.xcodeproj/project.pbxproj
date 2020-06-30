@@ -19,7 +19,6 @@
 		985F57E824A5E16D0050267C /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57E724A5E16D0050267C /* Performance.swift */; };
 		985F57EC24A5E7000050267C /* ListTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57EB24A5E7000050267C /* ListTableViewCellTest.swift */; };
 		985F57EE24A5E75A0050267C /* ListServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985F57ED24A5E75A0050267C /* ListServiceTest.swift */; };
-		98E8275324AB1364006E77FB /* TelstaCodeBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E8275224AB1364006E77FB /* TelstaCodeBaseUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +63,6 @@
 		985F57EB24A5E7000050267C /* ListTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCellTest.swift; sourceTree = "<group>"; };
 		985F57ED24A5E75A0050267C /* ListServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServiceTest.swift; sourceTree = "<group>"; };
 		98E8275024AB1364006E77FB /* TelstaCodeBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelstaCodeBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		98E8275224AB1364006E77FB /* TelstaCodeBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelstaCodeBaseUITests.swift; sourceTree = "<group>"; };
-		98E8275424AB1364006E77FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F134C1A724DD000EA328EBFC /* Pods_TelstaCodeBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelstaCodeBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,9 +120,8 @@
 		983473FD24A51784009C4C40 = {
 			isa = PBXGroup;
 			children = (
-				9834740824A51784009C4C40 /* TelistaCodeBase */,
-				9834741F24A51792009C4C40 /* TelistaCodeBaseTests */,
-				98E8275124AB1364006E77FB /* TelstaCodeBaseUITests */,
+				9834740824A51784009C4C40 /* TelstaCodeBase */,
+				9834741F24A51792009C4C40 /* TelstaCodeBaseTests */,
 				9834740724A51784009C4C40 /* Products */,
 				07EEE0BCA68CB053D4BE2FA8 /* Pods */,
 				01887F7061387914F2335B05 /* Frameworks */,
@@ -142,7 +138,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9834740824A51784009C4C40 /* TelistaCodeBase */ = {
+		9834740824A51784009C4C40 /* TelstaCodeBase */ = {
 			isa = PBXGroup;
 			children = (
 				9834741424A51791009C4C40 /* LaunchScreen.storyboard */,
@@ -152,10 +148,10 @@
 				985F57E324A5DFBD0050267C /* Model */,
 				9834741224A51791009C4C40 /* Assets.xcassets */,
 			);
-			path = TelistaCodeBase;
+			path = TelstaCodeBase;
 			sourceTree = "<group>";
 		};
-		9834741F24A51792009C4C40 /* TelistaCodeBaseTests */ = {
+		9834741F24A51792009C4C40 /* TelstaCodeBaseTests */ = {
 			isa = PBXGroup;
 			children = (
 				9834742224A51792009C4C40 /* Info.plist */,
@@ -163,7 +159,7 @@
 				985F57EB24A5E7000050267C /* ListTableViewCellTest.swift */,
 				985F57ED24A5E75A0050267C /* ListServiceTest.swift */,
 			);
-			path = TelistaCodeBaseTests;
+			path = TelstaCodeBaseTests;
 			sourceTree = "<group>";
 		};
 		985F57E324A5DFBD0050267C /* Model */ = {
@@ -198,15 +194,6 @@
 				9834740924A51785009C4C40 /* AppDelegate.swift */,
 			);
 			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		98E8275124AB1364006E77FB /* TelstaCodeBaseUITests */ = {
-			isa = PBXGroup;
-			children = (
-				98E8275224AB1364006E77FB /* TelstaCodeBaseUITests.swift */,
-				98E8275424AB1364006E77FB /* Info.plist */,
-			);
-			path = TelstaCodeBaseUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,7 +433,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98E8275324AB1364006E77FB /* TelstaCodeBaseUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,7 +584,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = TelistaCodeBase/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TelstaCodeBase/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -619,7 +605,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = TelistaCodeBase/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TelstaCodeBase/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
